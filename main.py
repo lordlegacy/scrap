@@ -2,10 +2,10 @@ from scraping_app.scraper import extract_text_from_url
 import sys
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python main.py <URL>")
-        sys.exit(1)
-    url = sys.argv[1]
+    #if len(sys.argv) != 2:
+    #    print("Usage: python main.py <URL>")
+   #     sys.exit(1)
+    #url = sys.argv[1]
     
     text = extract_text_from_url(url)
     
