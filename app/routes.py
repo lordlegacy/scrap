@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify
-from app.scraper import extract_text_from_url
+from app.scraper import extract_text_from_url, clean_and_chunk_text
+
 
 scraping = Blueprint('scraping', __name__)
 
@@ -12,8 +13,10 @@ def scrape_url():
 
     url = data['url']
     scraped_text = extract_text_from_url(url)
+    chunks = clean_and_chunk_text(scraped_text)
+
 
     if scraped_text:
-        return jsonify({'scraped_text': scraped_text}), 200
+        return chunks, 200
     else:
         return jsonify({'error': 'Failed to scrape the URL'}), 500
