@@ -14,7 +14,7 @@ This project implements a web scraping and Retrieval-Augmented Generation (RAG) 
 
 1. Clone the repository and navigate to the project directory:
    ```
-   git clone [repo_url]
+   git clone https://github.com/lordlegacy/scrap.git
    cd scrap
    ```
 
